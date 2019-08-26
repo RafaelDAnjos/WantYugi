@@ -10,5 +10,7 @@ package wantyugi;
  * @author 20161BSI0527
  */
 public class Loja {
+
+   
     
 }
