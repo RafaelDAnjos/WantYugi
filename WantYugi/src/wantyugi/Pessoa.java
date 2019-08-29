@@ -10,6 +10,6 @@ package wantyugi;
  * @author 20161BSI0527
  */
 public abstract class Pessoa {
-    String nome;
+      String nome;
     
 }

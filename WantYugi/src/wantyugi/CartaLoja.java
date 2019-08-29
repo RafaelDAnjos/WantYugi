@@ -12,13 +12,9 @@ import wantyugi.Carta;
  * @author 20161BSI0527
  */
 public class CartaLoja {
-    float Valor;
-    String DataEntrada;
-    Carta carta;
-    ArrayList<Loja> listalojas = new ArrayList();
-    public ArrayList procurarLojas(){
-        
-        
-        return null;
-    }
+    private float  valor;
+    private String dataEntrada;
+    Carta  carta;
+    Loja   loja; 
+   
 }

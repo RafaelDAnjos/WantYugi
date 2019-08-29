@@ -11,6 +11,14 @@ package wantyugi;
  */
 public class Loja {
 
+   String nomeLoja;
+   String url;
    
-    
+   public String Websacrap(){
+       
+   
+   return null;
+   }
+   
+   
 }

@@ -12,4 +12,24 @@ package wantyugi;
 public class Duelista extends Pessoa{
  
     private String email;
+    public Duelista(){
+        
+    
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
