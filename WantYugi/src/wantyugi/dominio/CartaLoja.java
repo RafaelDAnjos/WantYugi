@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wantyugi;
+package wantyugi.dominio;
 import java.util.ArrayList;
-import wantyugi.Loja;
-import wantyugi.Carta;
+import wantyugi.dominio.Loja;
+import wantyugi.dominio.Carta;
 /**
  *
  * @author 20161BSI0527
@@ -16,5 +16,12 @@ public class CartaLoja {
     private String dataEntrada;
     Carta  carta;
     Loja   loja; 
-   
-}
+    public float calcularValorMaximo(){
+        
+        return 0;
+    }
+    public float calcularValorMedio(){
+        return 0;
+    }
+
+} 

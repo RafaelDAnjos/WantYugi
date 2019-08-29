@@ -3,18 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wantyugi;
+package wantyugi.dominio;
 
 /**
  *
  * @author 20161BSI0527
  */
-public class WantYugi {
+public class Loja {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    }
-    
+   String nomeLoja;
+   String url;
+   
+   public String Webscrap(){
+       
+   
+   return null;
+   }
+   
+   
 }

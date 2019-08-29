@@ -1,4 +1,4 @@
-package wantyugi;
+package wantyugi.dominio;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,18 +13,13 @@ package wantyugi;
 public class Carta {
     private String nome;
     private String identificador;
+   
     public Carta(){
         
     
     
     }
-    public float calcularValorMaximo(){
-        return 0;
-    }
-    public float calcularValorMedio(){
-        return 0;
-    }
-
+ 
     public String getNome() {
         return nome;
     }
