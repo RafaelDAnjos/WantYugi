@@ -6,41 +6,76 @@
 package wantyugi.persistencia;
 
 import java.util.List;
-
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 /**
  *
  * @author 20161BSI0527
  */
-public class IGenericDAOImpl implements IGenericDAO {
+public class IGenericDAOImpl<T> implements IGenericDAO<T> {
+    protected static Session sessao;
+    protected static Transaction transacao;
 
     @Override
     public void inserir(Object obj) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          sessao = HibernateUtil.getSession();
+            transacao = sessao.beginTransaction();
+            sessao.save(obj);
+            sessao.flush();
+            transacao.commit();
+            sessao.close();
     }
 
     @Override
-    public void alterar(Object obj) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void alterar(T obj) throws Exception {
+        sessao = HibernateUtil.getSession();
+        transacao = sessao.beginTransaction();
+        sessao.update(obj);
+        transacao.commit();
+        sessao.close();
+        
     }
 
     @Override
-    public void deletar(Object obj) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deletar(T obj) throws Exception {
+        sessao = HibernateUtil.getSession();
+        transacao = sessao.beginTransaction();
+        sessao.delete(obj);
+        transacao.commit();
+        sessao.close();
     }
 
     @Override
     public List listar(Class clazz) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sessao = HibernateUtil.getSession();
+        transacao = sessao.beginTransaction();
+        List objts;
+        objts = null;
+        Criteria selectAll = sessao.createCriteria(clazz);
+        transacao.commit();
+        objts = selectAll.list();
+        sessao.close();
+        return objts;
     }
 
+   
     @Override
-    public Object listar(Class clazz, String pk) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public T listar(Class clazz, String pk) throws Exception {
+        sessao = HibernateUtil.getSession();
+        transacao = sessao.beginTransaction();
+        //Object objt = sessao.load(clazz, new Integer(Integer.parseInt(pk)) );
+        Object ob =  sessao.load(clazz, new Integer(Integer.parseInt(pk)));
+        transacao.commit();
+        sessao.flush();
+        sessao.close();
+        return (T)ob;
     }
 
     @Override
     public void rollBack() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        transacao.rollback();
+        sessao.close();
     }
     
 }

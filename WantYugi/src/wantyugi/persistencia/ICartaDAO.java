@@ -12,8 +12,8 @@ import wantyugi.dominio.Carta;
  *
  * @author 20161BSI0527
  */
-public interface ICartaDAO extends IGenericDAO{
+public interface ICartaDAO<Carta> extends IGenericDAO<Carta>{
     
-    public List<Carta> buscaCartaApartirDiID(int identificador);
-    
+    public List<Carta> buscaCartaApartirDoNome(Carta carta,String nome);
+    public void inserirCarta(Carta carta);
 }

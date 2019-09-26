@@ -9,6 +9,7 @@ import java.util.List;
 /**
  *
  * @author 20161BSI0527
+ * @param <T>
  */
 public interface IGenericDAO<T>{
     public void inserir(T obj) throws Exception;
