@@ -5,15 +5,20 @@
  */
 package wantyugi.persistencia;
 
+import java.util.ArrayList;
 import java.util.List;
-import wantyugi.dominio.Carta;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import wantyugi.dominio.CartaLoja;
+import wantyugi.dominio.Loja;
+
 
 /**
  *
  * @author 20161BSI0527
  */
-public interface ICartaDAO extends IGenericDAO<Carta>{
-    
-    public List<Carta> buscaCartaApartirDoNome(Carta carta);
-    public void inserirCarta(Carta carta);
+public class ILojaDAOImpl extends IGenericDAOImpl<Loja> implements ILojaDAO {
+ 
+
+
 }

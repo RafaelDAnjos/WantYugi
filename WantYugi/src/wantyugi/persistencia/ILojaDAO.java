@@ -5,15 +5,14 @@
  */
 package wantyugi.persistencia;
 
-import java.util.List;
-import wantyugi.dominio.Carta;
 
+import java.util.List;
+import wantyugi.dominio.CartaLoja;
+import wantyugi.dominio.Loja;
 /**
  *
  * @author 20161BSI0527
  */
-public interface ICartaDAO extends IGenericDAO<Carta>{
-    
-    public List<Carta> buscaCartaApartirDoNome(Carta carta);
-    public void inserirCarta(Carta carta);
+public interface ILojaDAO extends IGenericDAO<Loja>{
+
 }

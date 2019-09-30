@@ -8,20 +8,21 @@ package wantyugi.persistencia;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import wantyugi.dominio.Carta;
 
 /**
  *
  * @author 20161BSI0527
- * @param <Carta>
+
  */
-public class ICartaDAOImpl<Carta> extends IGenericDAOImpl<Carta> implements ICartaDAO<Carta> {
+public class ICartaDAOImpl extends IGenericDAOImpl<Carta> implements ICartaDAO {
     protected static Session sessao;
     protected static Transaction transacao;
     @Override
-    public List<Carta> buscaCartaApartirDoNome(Carta carta,String nome){
+    public List<Carta> buscaCartaApartirDoNome(Carta carta){
         sessao = HibernateUtil.getSession();
         transacao = sessao.beginTransaction();
-        List<Carta> listaCartas =  sessao.createQuery("from cartas where nome ="+nome).list();
+        List<Carta> listaCartas =  sessao.createQuery("from cartas where nome ="+carta.getNome()).list();
         transacao.commit();
         sessao.close();
         return listaCartas;    
