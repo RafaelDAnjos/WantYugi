@@ -11,7 +11,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  */
 public class IGenericDAOImpl<T> implements IGenericDAO<T> {
     protected static Session sessao;

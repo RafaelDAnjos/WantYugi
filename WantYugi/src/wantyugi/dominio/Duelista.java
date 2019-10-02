@@ -7,10 +7,10 @@ package wantyugi.dominio;
 
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  */
-public class Duelista extends Pessoa{
- 
+public class Duelista {
+     String nome;
     private String email;
     public Duelista(){
         

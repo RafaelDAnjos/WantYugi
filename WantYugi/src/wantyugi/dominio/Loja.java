@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  */
 public class Loja {
 

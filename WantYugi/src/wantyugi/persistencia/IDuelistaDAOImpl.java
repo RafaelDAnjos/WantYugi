@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wantyugi.dominio;
+package wantyugi.persistencia;
+
+import wantyugi.dominio.Duelista;
 
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  */
-public abstract class Pessoa {
-      String nome;
+public class IDuelistaDAOImpl extends IGenericDAOImpl<Duelista> implements IDuelistaDAO {
     
 }

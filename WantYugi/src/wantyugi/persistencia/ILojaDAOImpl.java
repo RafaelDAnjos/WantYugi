@@ -15,7 +15,7 @@ import wantyugi.dominio.Loja;
 
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  */
 public class ILojaDAOImpl extends IGenericDAOImpl<Loja> implements ILojaDAO {
  

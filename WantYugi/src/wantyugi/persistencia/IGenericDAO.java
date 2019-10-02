@@ -8,7 +8,7 @@ package wantyugi.persistencia;
 import java.util.List;
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  * @param <T>
  */
 public interface IGenericDAO<T>{

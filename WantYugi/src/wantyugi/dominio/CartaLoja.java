@@ -9,7 +9,7 @@ import wantyugi.dominio.Loja;
 import wantyugi.dominio.Carta;
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
  */
 public class CartaLoja {
     private float  valor;

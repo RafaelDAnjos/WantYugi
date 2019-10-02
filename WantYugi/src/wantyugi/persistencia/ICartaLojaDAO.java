@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wantyugi.dominio;
+package wantyugi.persistencia;
+
+import wantyugi.dominio.CartaLoja;
 
 /**
  *
  * @author Rafael Afonso dos Anjos
  */
-public class WantYugi {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    }
+public interface ICartaLojaDAO extends IGenericDAO<CartaLoja> {
     
 }

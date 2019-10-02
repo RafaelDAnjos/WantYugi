@@ -12,7 +12,7 @@ import wantyugi.dominio.Carta;
 
 /**
  *
- * @author 20161BSI0527
+ * @author Rafael Afonso dos Anjos
 
  */
 public class ICartaDAOImpl extends IGenericDAOImpl<Carta> implements ICartaDAO {
