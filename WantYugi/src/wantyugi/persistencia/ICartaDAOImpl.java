@@ -27,13 +27,5 @@ public class ICartaDAOImpl extends IGenericDAOImpl<Carta> implements ICartaDAO {
         sessao.close();
         return listaCartas;    
     }
-    @Override
-    public void inserirCarta(Carta carta){
-        sessao = HibernateUtil.getSession();
-        transacao = sessao.beginTransaction();
-        sessao.save(carta);
-        sessao.flush();
-        transacao.commit();
-        sessao.close();                      
-    }
+
 }

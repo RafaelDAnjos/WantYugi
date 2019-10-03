@@ -5,13 +5,16 @@
  */
 package wantyugi.dominio;
 
+import java.util.List;
+
 /**
  *
  * @author Rafael Afonso dos Anjos
  */
 public class Duelista {
-     String nome;
+    private String nome;
     private String email;
+    private List<Carta>cartasfavoritas;
     public Duelista(){
         
     
@@ -31,5 +34,9 @@ public class Duelista {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    public void favoritarCarta(Carta carta){
+        
     }
 }

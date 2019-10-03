@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package wantyugi.dominio;
-import java.util.ArrayList;
 import wantyugi.dominio.Loja;
 import wantyugi.dominio.Carta;
 /**
@@ -32,6 +31,8 @@ public class CartaLoja {
         this.dataEntrada = dataEntrada;
     }
 
+  
+    
     public Carta getCarta() {
         return carta;
     }

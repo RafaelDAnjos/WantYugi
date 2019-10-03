@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.url">jdbc:postgresql://raja.db.elephantsql.com:5432/bxwmclqx</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
+    <property name="hibernate.connection.pool_size">1</property>
+    <property name="hibernate.connection.username">bxwmclqx</property>
+    <property name="hibernate.connection.password"></property>
+    <mapping class="dominio.Carta"/>
+    <mapping class="dominio.Loja"/>
+    <mapping class="dominio.CartaLoja"/>
+    <mapping class="dominio.Duelista"/>
+  </session-factory>
+</hibernate-configuration>
+</root
