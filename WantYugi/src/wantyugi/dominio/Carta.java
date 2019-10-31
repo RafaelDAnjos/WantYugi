@@ -18,7 +18,7 @@ public class Carta {
     private String identificador;
     private String raridade;
     private String desc;
-    private String condicao;
+   
     private List<CartaLoja> listaCartaLoja;
     
    
@@ -62,13 +62,7 @@ public class Carta {
         this.desc = desc;
     }
 
-    public String getCondicao() {
-        return condicao;
-    }
 
-    public void setCondicao(String condicao) {
-        this.condicao = condicao;
-    }
     @OneToMany(mappedBy = "CartaLoja")
     public List<CartaLoja> getListaCartaLoja() {
         return listaCartaLoja;

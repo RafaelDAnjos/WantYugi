@@ -14,6 +14,7 @@ public class CartaLoja {
     private float  valor;
     private String dataEntrada;
     Carta  carta;
+    private String condicao;
 
     public float getValor() {
         return valor;
