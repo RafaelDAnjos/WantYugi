@@ -37,6 +37,12 @@ public class Duelista {
     }
     
     public void favoritarCarta(Carta carta){
+        this.cartasfavoritas.add(carta);
         
     }
+    public void desfavoritarCarta(Carta carta){
+        this.cartasfavoritas.remove(carta);    
+    }
+
 }
+

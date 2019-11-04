@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package wantyugi.dominio;
+import java.util.List;
 import wantyugi.dominio.Loja;
 import wantyugi.dominio.Carta;
 /**
@@ -42,12 +43,37 @@ public class CartaLoja {
         this.carta = carta;
     }
      
-    public float calcularValorMaximo(){
+    public double calcularValorMaximo(List<CartaLoja> lstcartas){
+        double maior;
+        maior = lstcartas.get(0).valor;
+        for(int i = 1; i<lstcartas.size();i++){
+          
+            
+            if(maior < lstcartas.get(i).valor){
+                maior = lstcartas.get(i).valor;
+            }                    
+        }
         
-        return 0;
+        return maior;
     }
-    public float calcularValorMedio(){
-        return 0;
+    public double calcularValorMedio(List<CartaLoja> lstcartas){
+        double soma = 0;
+        for(int i =0; i<lstcartas.size();i++){
+            soma = soma + lstcartas.get(i).valor;
+        }
+        return soma/lstcartas.size();
+     
+    }
+    public double calcularValorMinimo(List<CartaLoja> lstcartas){
+        double menor;
+        menor = lstcartas.get(0).valor;
+        for(int i =1;i<lstcartas.size();i++){
+            if(menor > lstcartas.get(i).valor){
+                menor = lstcartas.get(i).valor;
+            }
+        
+        }
+        return menor;
     }
 
 } 

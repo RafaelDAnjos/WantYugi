@@ -18,6 +18,10 @@ import wantyugi.dominio.Carta;
 public class ICartaDAOImpl extends IGenericDAOImpl<Carta> implements ICartaDAO {
     protected static Session sessao;
     protected static Transaction transacao;
+
+    ICartaDAOImpl() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     @Override
     public List<Carta> buscaCartaApartirDoNome(Carta carta){
         sessao = HibernateUtil.getSession();
