@@ -27,6 +27,10 @@ public class Carta {
     
     
     }
+    public String getID(){
+        return this.identificador+this.raridade;
+        
+}
  
     public String getNome() {
         return nome;
