@@ -13,11 +13,12 @@ import javax.persistence.OneToMany;
  *
  * @author Rafael Afonso dos Anjos
  */
-public class Carta {
+public abstract class Carta {
     private String nome;
     private String identificador;
     private String raridade;
     private String desc;
+   
    
     private List<CartaLoja> listaCartaLoja;
     
