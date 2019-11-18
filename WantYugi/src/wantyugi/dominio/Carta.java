@@ -18,6 +18,7 @@ public abstract class Carta {
     private String identificador;
     private String raridade;
     private String desc;
+    private Imagem imagem;
    
    
     private List<CartaLoja> listaCartaLoja;
