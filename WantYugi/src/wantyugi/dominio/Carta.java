@@ -19,14 +19,9 @@ public abstract class Carta {
     private String raridade;
     private String desc;
     private Imagem imagem;
-   
-   
     private List<CartaLoja> listaCartaLoja;
-    
-   
     public Carta(){
         
-    
     
     }
     public String getID(){
