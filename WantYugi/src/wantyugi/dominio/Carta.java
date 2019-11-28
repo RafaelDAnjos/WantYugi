@@ -2,6 +2,7 @@ package wantyugi.dominio;
 
 import java.util.List;
 import javax.persistence.OneToMany;
+import static jdk.nashorn.internal.objects.ArrayBufferView.length;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -68,7 +69,37 @@ public abstract class Carta {
     public List<CartaLoja> getListaCartaLoja() {
         return listaCartaLoja;
     }
+    public void addCartaLoja(Loja loja,float valor,String condicao){
+        if( !lojaEmLista(loja)){
+            
+        CartaLoja novacartaloja = new CartaLoja();
+        novacartaloja.setValor(valor);
+        novacartaloja.setCarta(this);
+        novacartaloja.setCondicao(condicao);
+        novacartaloja.setLoja(loja);
+        
+        this.listaCartaLoja.add(novacartaloja);
 
+        }
+        
+            
+    }
+    private boolean lojaEmLista(Loja loja){
+        for(int i =0;i< this.listaCartaLoja.size();i++){
+            CartaLoja cartaloja = listaCartaLoja.get(i);
+            if( cartaloja.carta.equals(this)){
+                if(cartaloja.getLoja().equals(loja)){
+                
+                    return true;
+                }
+            }
+        
+        
+         }
+        return false;      
+    }
+    
+    
     public void setListaCartaLoja(List<CartaLoja> listaCartaLoja) {
         this.listaCartaLoja = listaCartaLoja;
     }

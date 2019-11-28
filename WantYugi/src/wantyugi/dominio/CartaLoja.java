@@ -16,6 +16,23 @@ public class CartaLoja {
     private String dataEntrada;
     Carta  carta;
     private String condicao;
+    Loja loja;
+
+    public String getCondicao() {
+        return condicao;
+    }
+
+    public void setCondicao(String condicao) {
+        this.condicao = condicao;
+    }
+
+    public Loja getLoja() {
+        return loja;
+    }
+
+    public void setLoja(Loja loja) {
+        this.loja = loja;
+    }
 
     public float getValor() {
         return valor;
