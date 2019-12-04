@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Rafael Afonso dos Anjos
  */
-public class Duelista {
+public class Duelista implements Observador {
     private String nome;
     private String email;
     private List<Carta>cartasfavoritas;
@@ -42,6 +42,10 @@ public class Duelista {
     }
     public void desfavoritarCarta(Carta carta){
         this.cartasfavoritas.remove(carta);    
+    }
+
+    public void update(Observavel ob) {
+        System.out.println("Carta foi observada");
     }
 
 }

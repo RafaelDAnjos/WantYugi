@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
  *
  * @author Rafael Afonso dos Anjos
  */
-public abstract class Carta {
+public abstract class Carta extends Observavel{
     private String nome;
     private String identificador;
     private String raridade;

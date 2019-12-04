@@ -5,18 +5,10 @@
  */
 package wantyugi.dominio;
 
-import java.util.HashMap;
-
 /**
  *
  * @author rafae
  */
-public class ImagemFlyWeigth {
-    private HashMap<String,Imagem> cacheImagens = new HashMap<>(); 
-    
-    public void addImagem(Imagem imagem){
-        cacheImagens.put(imagem.getUrl(), imagem);
-    
-    }
-     
+public interface Observador {
+    public void update(Observavel ob);
 }
